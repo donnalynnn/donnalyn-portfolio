@@ -10,6 +10,8 @@ import MuteIcon from './assets/Mute.svg';
 import SoundIcon from './assets/Speaker.svg';
 import Night from './assets/Night.svg';
 import Day from './assets/Day.svg';
+import music from './assets/bgmusic.mp3';
+
 
 import speakbrightGif from './assets/speakbright.gif';
 import bizexpense from './assets/bizexpense.gif';
@@ -108,7 +110,7 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(true);
 
   useEffect(() => {
-    const audio = new Audio("/bgmusic.mp3");
+    const audio = new Audio(music);
     audio.loop = true;
     audio.volume = 0.5;
     audioRef.current = audio;
