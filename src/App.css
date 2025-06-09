@@ -76,7 +76,6 @@ p{
   color:var(--text-muted-color);
 }
 
-/* White card-style content box */
 .content-container {
   position: relative;
   background-color: var(--main-box);
@@ -85,14 +84,10 @@ p{
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.55);
   text-align: center;
   box-sizing: border-box;
+  max-height: 60%;
 }
 
 .avatar {
-  /* position: absolute;
-  top: -180px;         
-  left: 1vw;         
-  width: 15vw;      
-  height: 15vw; */
   position: absolute;
   top: -150px;
   left: 50%;
@@ -102,7 +97,6 @@ p{
   object-fit: cover;
 }
 
-/* Navbar container */
 .navbar {
   display: flex;
   justify-content: right;
@@ -112,7 +106,6 @@ p{
   margin-bottom: 1.5rem;
 }
 
-/* Common button style */
 .nav-button {
   display: flex;
   align-items: center;
@@ -133,20 +126,16 @@ p{
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-/* Background color variants */
 .nav-button.green { background-color: #96B794; }
 .nav-button.pink { background-color: #E58C8C; }
 .nav-button.blue { background-color: #86BEC2; }
 .nav-button.purple { background-color: #C1A2D9; }
 .nav-button.yellow { background-color: #cfb885; }
 
-
-/* Hover effect */
 .nav-button:hover {
   transform: scale(1.05);
 }
 
-/* Circular button for mute/unmute */
 .nav-button.circle {
   border-radius: 50%;
   padding: 0.75rem;
@@ -155,9 +144,6 @@ p{
   justify-content: center;
 }
 
-
-
-/* Responsive adjustments */
 @media screen and (max-width: 600px) {
   .avatar {
     top: -40px;
@@ -170,7 +156,6 @@ p{
     padding: 2rem 1rem 1rem 1rem;
   }
 }
-
 
 .roles {
   margin: 0.5rem 0 1.5rem 0;
@@ -185,7 +170,6 @@ p{
 .blue1 { color: #86BEC2; }
 .purple1 { color: #C1A2D9; }
 
-/* Paragraph text */
 .bio {
   font-size: 0.8rem;
   font-family: Montserrat;
@@ -194,7 +178,6 @@ p{
   line-height: 1.6;
 }
 
-/* Responsive behavior */
 @media screen and (max-width: 768px) {
   .avatar {
     width: 60px;
@@ -219,7 +202,7 @@ p{
   justify-content: center;
   margin: 2rem auto;
   max-width: 900px;
-  flex-wrap: wrap; /* for responsiveness */
+  flex-wrap: wrap;
 }
 
 .work-media {
@@ -229,17 +212,15 @@ p{
 .work-details {
   flex: 1 1 50%;
   color: var(--text-muted-color);
-  /* text-shadow: 1px 1px black; */
   font-family: "Pixelify Sans", sans-serif;
 }
 
 .work-image,
 .work-video {
-  width: auto;
+  width: 90%;
   max-height: 30rem;
   max-width: 30rem;
   border-radius: 12px;
-  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); */
 }
 
 @media (max-width: 768px) {
@@ -276,24 +257,15 @@ p{
   background-color: var(--next);
 }
 
-.petal-scene {
-  position: absolute;
-  top: 0;
-  height: 100vh;
-  width: 25vw; 
-  z-index: 0; 
-  pointer-events: none; 
+.desc {
+  font-size: 0.8rem;
+  text-align: justify;
 }
 
-.petal-scene.left {
-  left: 0;
+ReactMarkdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-.petal-scene.right {
-  right: 0;
-}
-
-.main-container {
-  position: relative;
-  z-index: 1; 
-}
