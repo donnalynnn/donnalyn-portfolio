@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/donnalyn-portfolio/static/css/main.4a87736d.css",
-    "main.js": "/donnalyn-portfolio/static/js/main.206d2129.js",
+    "main.css": "/donnalyn-portfolio/static/css/main.4b6f5ff8.css",
+    "main.js": "/donnalyn-portfolio/static/js/main.62ccfa3a.js",
     "static/media/speakbright.gif": "/donnalyn-portfolio/static/media/speakbright.3d1e5a9eb5edb216f231.gif",
     "static/media/rymind.mp4": "/donnalyn-portfolio/static/media/rymind.2a0e06565610b1c1e04d.mp4",
     "static/media/bizexpense.gif": "/donnalyn-portfolio/static/media/bizexpense.2293a98f837a5e70af25.gif",
+    "static/media/breathewrite.gif": "/donnalyn-portfolio/static/media/breathewrite.53f703e05135368aae05.gif",
+    "static/media/avatar-night.png": "/donnalyn-portfolio/static/media/avatar-night.f1fe3aed88c5b43cec33.png",
     "static/media/background-night.jpg": "/donnalyn-portfolio/static/media/background-night.30eadc12c3371682bc5f.jpg",
     "static/media/avatar.png": "/donnalyn-portfolio/static/media/avatar.156edca75ff418bae1c3.png",
-    "static/media/avatar-night.png": "/donnalyn-portfolio/static/media/avatar-night.9122999d92776d6ed923.png",
     "static/media/background.jpg": "/donnalyn-portfolio/static/media/background.30b70645c96171d38ff3.jpg",
     "static/media/Resume.pdf": "/donnalyn-portfolio/static/media/Resume.a2edb3073526a7470b7b.pdf",
     "static/media/Speaker.svg": "/donnalyn-portfolio/static/media/Speaker.41616cb72e26f98eec891960e3a8e546.svg",
@@ -18,11 +19,11 @@
     "static/media/About.svg": "/donnalyn-portfolio/static/media/About.4af887140f49469a7ab1c6a32654ba47.svg",
     "static/media/Portfolio.svg": "/donnalyn-portfolio/static/media/Portfolio.42d1d4451b1b477a28b109aee1a39adb.svg",
     "static/media/Download.svg": "/donnalyn-portfolio/static/media/Download.88be3c97f45cc2a8be4656e30ad1861c.svg",
-    "main.4a87736d.css.map": "/donnalyn-portfolio/static/css/main.4a87736d.css.map",
-    "main.206d2129.js.map": "/donnalyn-portfolio/static/js/main.206d2129.js.map"
+    "main.4b6f5ff8.css.map": "/donnalyn-portfolio/static/css/main.4b6f5ff8.css.map",
+    "main.62ccfa3a.js.map": "/donnalyn-portfolio/static/js/main.62ccfa3a.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a87736d.css",
-    "static/js/main.206d2129.js"
+    "static/css/main.4b6f5ff8.css",
+    "static/js/main.62ccfa3a.js"
   ]
 }
