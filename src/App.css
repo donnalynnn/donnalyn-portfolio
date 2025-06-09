@@ -1,38 +1,299 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+:root {
+  --bg-image: url('./assets/background.jpg');
+  --text-muted-color: #6D6D6D;
+
+  --nav-button-bg: transparent;
+  --nav-button-shadow: none;
+  --main-box: #FFFFFF;
+  --h1:#FFC4BD;
+  --next: #96B794;
+
+}
+
+[data-theme="light"] {
+  --bg-image: url('./assets/background.jpg');
+  --text-muted-color: #6D6D6D;
+
+  --nav-button-bg: transparent;
+  --nav-button-shadow: none;
+  --main-box: #FFFFFF;
+  --h1:#FFC4BD;
+  --next: #96B794;
+
+}
+
+[data-theme="dark"] {
+  --bg-image: url('./assets/background-night.jpg');
+  --text-muted-color: #FFFFFF;
+
+  --nav-button-bg: #FF8800;
+  --nav-button-shadow: 0 0 19.1px #FF8800;
+  --main-box: #0A192E;
+  --h1:#6894CE;
+  --next:#4C6589;
+}
+
+
+body, html, #root, .App {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-image 0.3s ease;
+}
+
+.avatar-wrapper {
+  /* position: relative; */
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: transparent;
+  background: none !important;
+  opacity: 1; 
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: "Pixelify Sans", sans-serif;
+  color:var(--h1);
+  text-shadow: 4px 3px 2px rgba(0, 0, 0, 0.178);
+}
+p{
+  font-size: 1rem;
+  font-family: Montserrat, light;
+  color:var(--text-muted-color);
+}
+
+/* White card-style content box */
+.content-container {
+  position: relative;
+  background-color: var(--main-box);
+  padding: .2rem 2rem 2rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.55);
   text-align: center;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.avatar {
+  /* position: absolute;
+  top: -180px;         
+  left: 1vw;         
+  width: 15vw;      
+  height: 15vw; */
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-200%);
+  max-width: 180px;   
+  max-height: 180px;
+  object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+/* Common button style */
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight:600;
+  color: white;
+  transition: transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  background-color: var(--nav-button-bg);
+  box-shadow: var(--nav-button-shadow);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Background color variants */
+.nav-button.green { background-color: #96B794; }
+.nav-button.pink { background-color: #E58C8C; }
+.nav-button.blue { background-color: #86BEC2; }
+.nav-button.purple { background-color: #C1A2D9; }
+.nav-button.yellow { background-color: #cfb885; }
+
+
+/* Hover effect */
+.nav-button:hover {
+  transform: scale(1.05);
+}
+
+/* Circular button for mute/unmute */
+.nav-button.circle {
+  border-radius: 50%;
+  padding: 0.75rem;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+}
+
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .avatar {
+    top: -40px;
+    left: 15px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .content-container {
+    padding: 2rem 1rem 1rem 1rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.roles {
+  margin: 0.5rem 0 1.5rem 0;
+  /* font-weight: 600; */
+  font-size: 0.9rem;
+  font-family: Montserrat, light;
+  
+}
+
+.green1 { color: #96B794; }
+.pink1 { color: #E58C8C; }
+.blue1 { color: #86BEC2; }
+.purple1 { color: #C1A2D9; }
+
+/* Paragraph text */
+.bio {
+  font-size: 0.8rem;
+  font-family: Montserrat;
+  font-weight: 400;
+  color:var(--text-muted-color);
+  line-height: 1.6;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+  .avatar {
+    width: 60px;
+    top: -30px;
+    left: 10px;
+  }
+
+  .content-container {
+    padding: 1.5rem;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.work-carousel {
   display: flex;
-  flex-direction: column;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 2rem auto;
+  max-width: 900px;
+  flex-wrap: wrap; /* for responsiveness */
+}
+
+.work-media {
+  flex: 1 1 40%;
+}
+
+.work-details {
+  flex: 1 1 50%;
+  color: var(--text-muted-color);
+  /* text-shadow: 1px 1px black; */
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.work-image,
+.work-video {
+  width: auto;
+  max-height: 30rem;
+  max-width: 30rem;
+  border-radius: 12px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); */
+}
+
+@media (max-width: 768px) {
+  .work-carousel {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .work-details {
+    margin-top: 1rem;
+  }
+}
+
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.carousel-btn {
+  background-color: var(--next);
+  border: none;
   color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  box-shadow: 2px 2px 0 #333;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.carousel-btn:hover {
+  transform: scale(1.05);
+  background-color: var(--next);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.petal-scene {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 25vw; 
+  z-index: 0; 
+  pointer-events: none; 
+}
+
+.petal-scene.left {
+  left: 0;
+}
+
+.petal-scene.right {
+  right: 0;
+}
+
+.main-container {
+  position: relative;
+  z-index: 1; 
 }
